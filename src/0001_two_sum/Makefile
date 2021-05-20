@@ -8,6 +8,9 @@ cpp:clean
 go:clean
 	go build -o two_sum two_sum.go
 
+rust:clean
+	rustc two_sum.rs
+
 clean:
 	- rm -f two_sum
 
