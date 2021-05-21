@@ -32,3 +32,4 @@
 *.app
 
 src/0001_two_sum/two_sum
+src/0002_three_sum/three_sum

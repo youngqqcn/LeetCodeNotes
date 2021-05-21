@@ -43,72 +43,47 @@ public:
 
     vector<vector<int>> threeSum(vector<int> &nums)
     {
-        vector<vector<int>> result;
         set<vector<int>> resultSet;
-        std::sort(nums.begin(), nums.end(), [](int a, int b)
-                  { return a < b; });
+        std::sort(nums.begin(), nums.end(), [](int a, int b) { return a < b; });
 
-        int left = 0;
-        int right = nums.size() - 1;
-        int i = left + 1;
-        for (; left <= right - 2 && left < i && i < right;)
+        for (int i = 0; i < nums.size(); i++)
         {
-            for (;; i++)
+            if(nums[i] > 0) continue;
+
+            if (i > 0 && nums[i] == nums[i - 1]) 
             {
-                int a = nums[left];
-                int b = nums[i];
-                int c = nums[right];
-                if (a + b + c > 0 && i == right - 1)
+                continue;
+            }
+
+            int left = i+ 1;
+            int right = nums.size() - 1;
+            for(;left < right;)
+            {
+                int sum = nums[i] + nums[left] + nums[right];
+                if(sum > 0) 
                 {
-                    // right 左移
                     right--;
-                    continue;
                 }
-                else if (a + b + c < 0 && i == left + 1)
+                else if(sum < 0)
                 {
-                    // left 右移
+                    left++;
+                }
+                if (sum == 0)
+                {
+                    resultSet.insert({nums[left], nums[i], nums[right]});
+                    right--; 
                     left++;
                     continue;
                 }
-                else
-                {
-                    // found one
-                    vector<int> oneResult({a, b, c});
-                    if (resultSet.find(oneResult) == resultSet.end())
-                    {
-                        resultSet.insert(oneResult);
-                        result.push_back(oneResult);
-                    }
-                }
             }
         }
-
-        return result;
+        return vector<vector<int>>(resultSet.begin(), resultSet.end());
     }
 };
-}
-;
 
-int main()
+void test(vector<int> &nums)
 {
-
-    vector<int> vctNums({-1, 0, 1, 2, -1, -4});
-    auto vctResult = Solution().threeSum(vctNums);
-
-    // auto tp1 = std::make_tuple(2, 1, 3);
-    // auto tp2 = std::make_tuple(1, 3, 2);
-    //
-    // auto v1 = vector<int>{2, 1, 3 };
-    // auto v2 = vector<int>{1, 3, 2 };
-
-    // std::sort(v1.begin(), v1.end(), [](int x, int y){return x < y;});
-    // std::sort(v2.begin(), v2.end(), [](int x, int y){return x < y;});
-
-    // if(v1 == v2)
-    // {
-    //     cout << "v1 == v2" << endl;
-    // }
-
+    auto vctResult = Solution().threeSum(nums);
     for (auto v : vctResult)
     {
         for (auto item : v)
@@ -117,7 +92,23 @@ int main()
         }
         cout << endl;
     }
-    cout << endl;
+    cout << "================" << endl;
+}
+
+int main()
+{
+
+    vector<int> vctNums({-1, 0, 1, 2, -1, -4});
+    test(vctNums);
+    // // // -4, -1, -1, 0, 1, 2
+    vector<int> vctNums2({3, 0, -2, -1, 1, 2});
+    test(vctNums2);
+
+    vector<int> vctNums3({1, 2, -2, -1});
+    test(vctNums3);
+
+    vector<int> vctNums4({-1,0,1,2,-1,-4,-2,-3,3,0,4});
+    test(vctNums4);
 
     return 0;
 }

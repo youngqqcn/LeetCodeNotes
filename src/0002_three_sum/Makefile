@@ -2,7 +2,7 @@ all:cpp
 
 
 cpp:clean
-	g++ three_sum.cc -o three_sum -std=c++20
+	g++ three_sum.cc -o three_sum -std=c++2a
 
 
 go:clean
