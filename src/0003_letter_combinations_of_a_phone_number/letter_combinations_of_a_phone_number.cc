@@ -24,35 +24,35 @@ class Solution
     vector<string> result;
 public:
    
-    // void backtracking(const string &digits, int index)
-    // {
-    //     // 递归终止条件
-    //     if (index == digits.length())
-    //     {
-    //         result.push_back(str);
-    //         return;
-    //     }
-
-    //     int idx = digits[index] - '0';
-    //     string letters = letterMap[idx];
-    //     for (int j = 0; j < letters.length(); j++)
-    //     {
-    //         // 处理
-    //         str.push_back(letters[j]);
-
-    //         // 递归
-    //         backtracking(digits, index + 1);
-
-    //         // 回溯
-    //         str.pop_back();
-    //     }
-    // }
-
-    // 迭代方式
     void backtracking(const string &digits, int index)
     {
-        
+        // 递归终止条件
+        if (index == digits.length())
+        {
+            result.push_back(str);
+            return;
+        }
+
+        int idx = digits[index] - '0';
+        string letters = letterMap[idx];
+        for (int j = 0; j < letters.length(); j++)
+        {
+            // 处理
+            str.push_back(letters[j]);
+
+            // 递归
+            backtracking(digits, index + 1);
+
+            // 回溯
+            str.pop_back();
+        }
     }
+
+    // // 迭代方式
+    // void backtracking(const string &digits, int index)
+    // {
+        
+    // }
 
     vector<string> letterCombinations(string digits)
     {

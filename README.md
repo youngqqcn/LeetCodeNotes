@@ -1,5 +1,14 @@
 # LeetCodeNodes
-leetcode notes
+
+```shell
+
+# 创建新项目, 例如:
+python create.py 0001_two_sum
+
+```
+
+
+---
 
 结合 [youngqqcn/leetcode-master](https://github.com/youngqqcn/leetcode-master)
 
