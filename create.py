@@ -100,6 +100,9 @@ def main(project_name):
         f = open(filepath, 'w')
         f.write(code)
         f.close()
+    
+    with open('.gitignore', 'a+') as f:
+        f.write('\n' +  os.path.join(dir_path,filename) + '\n')
 
     pass
 
