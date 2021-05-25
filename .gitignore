@@ -35,6 +35,7 @@ src/0001_two_sum/two_sum
 src/0015_three_sum/three_sum
 main
 a.out
+core
 
 src/0020_valid_parentheses/valid_parentheses
-src/swap_nodes_in_pairs
+src/0024_swap_nodes_in_pairs/swap_nodes_in_pairs
