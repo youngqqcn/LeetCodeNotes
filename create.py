@@ -79,6 +79,7 @@ def main(project_name):
     os.mkdir(dir_path)
 
     filename = project_name[project_name.find('_')+1:]
+    filename = filename.strip()
     # print(filename)
 
     infos = {
@@ -101,8 +102,9 @@ def main(project_name):
         f.write(code)
         f.close()
     
+    # 忽略可执行文件(包括调试)
     with open('.gitignore', 'a+') as f:
-        f.write('\n' +  os.path.join(dir_path,filename) + '\n')
+        f.write(os.path.join('src/',filename) + '\n')
 
     pass
 
