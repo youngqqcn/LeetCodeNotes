@@ -32,8 +32,9 @@
 *.app
 
 src/0001_two_sum/two_sum
-src/0002_three_sum/three_sum
+src/0015_three_sum/three_sum
 main
 a.out
 
-src/0006_valid_parentheses/valid_parentheses
+src/0020_valid_parentheses/valid_parentheses
+src/swap_nodes_in_pairs

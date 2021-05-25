@@ -104,7 +104,7 @@ def main(project_name):
     
     # 忽略可执行文件(包括调试)
     with open('.gitignore', 'a+') as f:
-        f.write(os.path.join('src/',filename) + '\n')
+        f.write(os.path.join(os.path.join('src/', project_name), filename )+ '\n')
 
     pass
 
