@@ -16,6 +16,11 @@ HEADER_TEMPLATE = """\
 CPP_TEMPLATE = """\
 #include <iostream>
 #include <vector>
+#include <string>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <memory>
 using namespace std;
 
 

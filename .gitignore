@@ -40,3 +40,5 @@ core
 src/0020_valid_parentheses/valid_parentheses
 src/0024_swap_nodes_in_pairs/swap_nodes_in_pairs
 src/0027_remove_element/remove_element
+src/0028_strStr/strStr
+src/0028_implement_strstr/implement_strstr

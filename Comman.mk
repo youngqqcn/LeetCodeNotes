@@ -7,7 +7,7 @@ echo:
 	$(SOURCE)
 
 cpp:clean
-	g++ $(SOURCE).cc -o $(TARGET) -std=c++2a
+	g++ -g $(SOURCE).cc -o  $(TARGET) -std=c++2a
 	$(MAKE) run
 
 go:clean

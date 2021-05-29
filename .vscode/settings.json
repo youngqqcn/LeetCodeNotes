@@ -9,6 +9,17 @@
         "initializer_list": "cpp",
         "ranges": "cpp",
         "tuple": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "*.tcc": "cpp",
+        "typeinfo": "cpp",
+        "unordered_set": "cpp",
+        "functional": "cpp",
+        "streambuf": "cpp",
+        "ostream": "cpp",
+        "iterator": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "sstream": "cpp",
+        "system_error": "cpp"
     }
 }
