@@ -36,7 +36,7 @@ C++,Golang,Rust,Python
 |  2021-05-25  |  [0020.有效的括号.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0020.%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7.md)  | 100%  |    |   |
 |  2021-05-26  |  [0024.两两交换链表中的节点.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.md)  | 100%  |    |   |
 |  2021-05-27  |  [0027.移除元素.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.md)  | 100%  |    |   |
-|  2021-05-28  |  [0028.实现strStr.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0028.%E5%AE%9E%E7%8E%B0strStr.md)  |   |    |   |
+|  2021-05-28  |  [0028.实现strStr.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0028.%E5%AE%9E%E7%8E%B0strStr.md)  | 100%  |    |   |
 |  2021-05-29  |  [0035.搜索插入位置.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0035.%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE.md)  |   |    |   |
 |  2021-05-30  |  [0037.解数独.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0037.%E8%A7%A3%E6%95%B0%E7%8B%AC.md)  |   |    |   |
 |  2021-05-31  |  [0039.组合总和.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0039.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C.md)  |   |    |   |
