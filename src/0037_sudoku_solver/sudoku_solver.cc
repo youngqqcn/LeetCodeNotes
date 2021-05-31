@@ -1,6 +1,6 @@
 // author: yqq
 // date: 2021-05-31 21:02:49
-// descriptions:
+// descriptions: https://leetcode-cn.com/problems/sudoku-solver/
 #include <iostream>
 #include <vector>
 #include <string>

@@ -38,8 +38,8 @@ C++,Golang,Rust,Python
 |  2021-05-27  |  [0027.移除元素.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0027.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.md)  | 100%  |    |   |
 |  2021-05-28  |  [0028.实现strStr.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0028.%E5%AE%9E%E7%8E%B0strStr.md)  | 100%  |    |   |
 |  2021-05-29  |  [0035.搜索插入位置.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0035.%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE.md)  |   |    |   |
-|  2021-05-30  |  [0037.解数独.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0037.%E8%A7%A3%E6%95%B0%E7%8B%AC.md)  |   |    |   |
-|  2021-05-31  |  [0039.组合总和.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0039.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C.md)  |   |    |   |
+|  2021-05-30  |  [0037.解数独.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0037.%E8%A7%A3%E6%95%B0%E7%8B%AC.md)  | 100%  |    |   |
+|  2021-05-31  |  [0039.组合总和.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0039.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C.md)  | 100%   |    |   |
 |  2021-06-01  |  [0040.组合总和II.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0040.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CII.md)  |   |    |   |
 |  2021-06-02  |  [0045.跳跃游戏II.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0045.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8FII.md)  |   |    |   |
 |  2021-06-03  |  [0046.全排列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0046.%E5%85%A8%E6%8E%92%E5%88%97.md)  |   |    |   |
