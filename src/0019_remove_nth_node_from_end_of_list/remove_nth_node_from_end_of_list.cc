@@ -1,6 +1,6 @@
 // author: yqq
 // date: 2021-05-24 19:33:09
-// descriptions:
+// descriptions: https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/
 #include <iostream>
 #include <vector>
 using namespace std;
