@@ -22,14 +22,15 @@ public:
         int slowRange = nums[0];
         int maxRange  = slowRange;
         int steps = 1;
-        for (int i = 0; i < nums.size(); i++)
+        for (int i = 0; i < nums.size() -1 ; i++)
         {
             maxRange = max(nums[i] + i, maxRange);
-            if ( i > slowRange )
+            if ( i >= slowRange )
             {
                 steps++;
                 slowRange = maxRange; 
-            }else if(maxRange >= nums.size() - 1){
+            }
+             if(maxRange >= nums.size() - 1){
                 if( slowRange < maxRange){
                     steps++;
                 }
@@ -37,6 +38,21 @@ public:
             }
         }
         return steps;
+    }
+
+    // 
+    int jump_v2(vector<int>& nums) {
+        int curDistance = 0;    // 当前覆盖的最远距离下标
+        int ans = 0;            // 记录走的最大步数
+        int nextDistance = 0;   // 下一步覆盖的最远距离下标
+        for (int i = 0; i < nums.size() - 1; i++) { // 注意这里是小于nums.size() - 1，这是关键所在
+            nextDistance = max(nums[i] + i, nextDistance); // 更新下一步覆盖的最远距离下标
+            if (i == curDistance) {                 // 遇到当前覆盖的最远距离下标
+                curDistance = nextDistance;         // 更新当前覆盖的最远距离下标
+                ans++;
+            }
+        }
+        return ans;
     }
 };
 
