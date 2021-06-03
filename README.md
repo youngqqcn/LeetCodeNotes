@@ -42,7 +42,7 @@ C++,Golang,Rust,Python
 |  2021-05-31  |  [0039.组合总和.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0039.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C.md)  | 100%   |    |   |
 |  2021-06-01  |  [0040.组合总和II.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0040.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CII.md)  | 100%  |    |   |
 |  2021-06-02  |  [0045.跳跃游戏II.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0045.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8FII.md)  |  100% |    |   |
-|  2021-06-03  |  [0046.全排列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0046.%E5%85%A8%E6%8E%92%E5%88%97.md)  |   |    |   |
+|  2021-06-03  |  [0046.全排列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0046.%E5%85%A8%E6%8E%92%E5%88%97.md)  | 100%  |    |   |
 |  2021-06-04  |  [0047.全排列II.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0047.%E5%85%A8%E6%8E%92%E5%88%97II.md)  |   |    |   |
 |  2021-06-05  |  [0051.N皇后.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0051.N%E7%9A%87%E5%90%8E.md)  |   |    |   |
 |  2021-06-06  |  [0053.最大子序和.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0053.%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C.md)  |   |    |   |
