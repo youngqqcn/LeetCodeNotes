@@ -19,7 +19,7 @@ public:
     vector<vector<char>> board;
     int nQueens = 0;
 
-    bool check(int row, int col)
+    bool canPut(int row, int col)
     {
         // 检查行
         for (int i = 0; i < board.size(); i++)
@@ -74,36 +74,48 @@ public:
         return true;
     }
 
+    void saveBoard()
+    {
+        // 保存结果
+        vector<string> solution;
+        for (int row = 0; row < board.size(); row++)
+        {
+            string rowStr;
+            for (int col = 0; col < board.size(); col++)
+            {
+                rowStr.push_back(board[row][col]);
+            }
+            solution.push_back(rowStr);
+        }
+        result.push_back(move(solution));
+        return;
+    }
+
     void solve(int startRow, int startCol)
     {
         // 递归终止
         if (board.size() == nQueens)
         {
-            // 保存结果
-            vector<string> solution;
-            for (int row = 0; row < board.size(); row++)
-            {
-                string rowStr;
-                for (int col = 0; col < board.size(); col++)
-                {
-                    rowStr.push_back(board[row][col]);
-                }
-                solution.push_back(rowStr);
-            }
-            result.push_back(solution);
+            saveBoard();
             return;
         }
 
         for (int i = startRow; i < board.size(); i++)
         {
+            // 每行至少有一个皇后, 如果不满足，则不再向下查找
+            if (nQueens != i)
+            {
+                return;
+            }
+
             for (int j = 0; j < board.size(); j++)
             {
-                if (check(i, j))
+                if (canPut(i, j))
                 {
                     // 递归
                     board[i][j] = 'Q';
                     nQueens++;
-                    solve(i, j);
+                    solve(i + 1, j);
 
                     // 回溯
                     board[i][j] = '.';
@@ -187,7 +199,6 @@ int main()
     //     cout << "FAILED" << endl;
     // }
 
-
     //  sol.board = vector<vector<char>>({
     //     {'Q', '.', '.', '.'},
     //     {'.', '.', '.', 'Q'},
@@ -197,8 +208,7 @@ int main()
     // if (!sol.check(2, 1))
     // {
     //     cout << "FAILED" << endl;
-    // } 
-
+    // }
 
     test(4, {{".Q..", "...Q", "Q...", "..Q."}, {"..Q.", "Q...", "...Q", ".Q.."}});
     test(1, {{"Q"}});
