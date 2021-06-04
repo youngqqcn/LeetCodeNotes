@@ -21,7 +21,7 @@ public:
 
     bool canPut(int row, int col)
     {
-        // 检查行
+        // 检查行(在实现中可以不检查， 因为实现的时候保证了每行只放一个皇后)
         for (int i = 0; i < board.size(); i++)
         {
             if (board[row][i] != '.')
