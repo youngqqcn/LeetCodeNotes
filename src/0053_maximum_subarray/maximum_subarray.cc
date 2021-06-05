@@ -50,7 +50,8 @@ using namespace std;
 class Solution
 {
 public:
-    int maxSubArray(vector<int> &nums)
+    // 暴力解法, 时间复杂度 O(n^2), 空间复杂度 O(1)
+    int maxSubArray_v1(vector<int> &nums)
     {
         int maxSum = nums[0];
         for (int i = 0; i < nums.size(); i++)
@@ -65,6 +66,41 @@ public:
 
         return maxSum;
     }
+
+    // 贪心算法,  时间复杂度O(n), 空间复杂度O(1)
+    int maxSubArray_v2(vector<int> &nums)
+    {
+        int result = INT32_MIN;
+        int sum = 0;
+        for(int i = 0; i < nums.size(); i++){
+            sum += nums[i];
+            if(sum > result){
+                result = sum;
+            }
+            if(sum < 0) {
+                sum  = 0;
+            }
+        }
+        return result;
+    }
+
+
+    // 动态规划
+    int maxSubArray(vector<int> &nums)
+    {
+        vector<int> dp(nums.size());
+        dp[0] = nums[0];
+        int result = dp[0];
+        for(int i = 1; i < nums.size(); i++){
+            dp[i] = max(dp[i-1] + nums[i], nums[i]);
+            if(dp[i] > result){
+                result = dp[i];
+            }
+        }
+        return result;
+    }
+
+
 };
 
 void test(vector<int> nums, int expected)
