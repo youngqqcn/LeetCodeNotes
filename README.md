@@ -48,7 +48,7 @@ C++,Golang,Rust,Python
 |  2021-06-06  |  [0053.最大子序和.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0053.%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C.md)  | 100%  |    |   |
 |  2021-06-07  |  [0053.最大子序和（动态规划）.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0053.%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C%EF%BC%88%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%89.md)  | 100%  |    |   |
 |  2021-06-08  |  [0055.跳跃游戏.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0055.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F.md)  | 100%  |    |   |
-|  2021-06-09  |  [0056.合并区间.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0056.%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4.md)  |   |    |   |
+|  2021-06-09  |  [0056.合并区间.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0056.%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4.md)  | 100%  |    |   |
 |  2021-06-10  |  [0059.螺旋矩阵II.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0059.%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5II.md)  |   |    |   |
 |  2021-06-11  |  [0062.不同路径.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0062.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84.md)  |   |    |   |
 |  2021-06-12  |  [0063.不同路径II.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0063.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84II.md)  |   |    |   |
