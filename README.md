@@ -12,7 +12,7 @@ python create.py 0001_two_sum
 
 结合 [youngqqcn/leetcode-master](https://github.com/youngqqcn/leetcode-master)
 
-记录leetcode做题, 编程语言选用: 
+记录leetcode做题, 编程语言选用:
 C++,Golang,Rust,Python
 
 
@@ -50,7 +50,7 @@ C++,Golang,Rust,Python
 |  2021-06-08  |  [0055.跳跃游戏.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0055.%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F.md)  | 100%  |    |   |
 |  2021-06-09  |  [0056.合并区间.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0056.%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4.md)  | 100%  |    |   |
 |  2021-06-10  |  [0059.螺旋矩阵II.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0059.%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5II.md)  |  100% |    |   |
-|  2021-06-11  |  [0062.不同路径.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0062.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84.md)  |   |    |   |
+|  2021-06-11  |  [0062.不同路径.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0062.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84.md)  | 100%  |    |   |
 |  2021-06-12  |  [0063.不同路径II.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0063.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84II.md)  |   |    |   |
 |  2021-06-13  |  [0070.爬楼梯.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0070.%E7%88%AC%E6%A5%BC%E6%A2%AF.md)  |   |    |   |
 |  2021-06-14  |  [0070.爬楼梯完全背包版本.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0070.%E7%88%AC%E6%A5%BC%E6%A2%AF%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E7%89%88%E6%9C%AC.md)  |   |    |   |
