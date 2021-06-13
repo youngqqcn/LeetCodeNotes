@@ -52,7 +52,7 @@ C++,Golang,Rust,Python
 |  2021-06-10  |  [0059.螺旋矩阵II.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0059.%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5II.md)  |  100% |    |   |
 |  2021-06-11  |  [0062.不同路径.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0062.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84.md)  | 100%  |    |   |
 |  2021-06-12  |  [0063.不同路径II.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0063.%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84II.md)  | 100%  |    |   |
-|  2021-06-13  |  [0070.爬楼梯.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0070.%E7%88%AC%E6%A5%BC%E6%A2%AF.md)  |   |    |   |
+|  2021-06-13  |  [0070.爬楼梯.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0070.%E7%88%AC%E6%A5%BC%E6%A2%AF.md)  | 100%  |    |   |
 |  2021-06-14  |  [0070.爬楼梯完全背包版本.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0070.%E7%88%AC%E6%A5%BC%E6%A2%AF%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E7%89%88%E6%9C%AC.md)  |   |    |   |
 |  2021-06-15  |  [0072.编辑距离.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0072.%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB.md)  |   |    |   |
 |  2021-06-16  |  [0077.组合.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0077.%E7%BB%84%E5%90%88.md)  |   |    |   |
