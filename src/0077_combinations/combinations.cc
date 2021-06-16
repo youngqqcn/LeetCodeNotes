@@ -44,7 +44,9 @@ public:
         }
 
         // 遍历
-        for (int j = startIndex; j <= n; j++)
+        // for (int j = startIndex; j <= n ;  j++)  // 未优化, 40ms
+        // 当元素后面的元素个数不足时,不再遍历
+        for (int j = startIndex; j <= n - (k - nums.size()) + 1;  j++) // 优化 , 4ms
         {
             nums.push_back(j);
             backtracking(j + 1, n, k);
