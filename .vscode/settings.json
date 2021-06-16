@@ -22,5 +22,6 @@
         "sstream": "cpp",
         "system_error": "cpp",
         "iostream": "cpp"
-    }
+    },
+    "editor.trimAutoWhitespace": false
 }
