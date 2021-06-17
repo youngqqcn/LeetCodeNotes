@@ -140,8 +140,18 @@ private:
     }
 
 
+    // 两个指针, p, q,  p向左时, q向右; p向右时, q向左
+    bool check(TreeNode *p, TreeNode *q)
+    {
+        if(nullptr == p && nullptr == q) return true;
+        if(nullptr == p || nullptr == q ) return false;
+        if(p->val != q->val) return false;
+        return check(p->left, q->right) && check(p->right, q->left);
+    }
+
+
 public:
-    bool isSymmetric(TreeNode *root)
+    bool isSymmetric_v1(TreeNode *root)
     {
         fixNullNode(root);
         vector<int> nums1;
@@ -171,6 +181,43 @@ public:
         }
 
 
+        return true;
+    }
+
+
+    // 递归
+    bool isSymmetric_v2(TreeNode *root)
+    {
+        return check(root->left, root->right);
+    }
+
+
+    // 迭代
+    bool isSymmetric(TreeNode *root)
+    {
+        queue<TreeNode*> nodesQueue;
+
+        TreeNode *p;
+        TreeNode *q;
+        nodesQueue.push(root->left);
+        nodesQueue.push(root->right);
+        for(;!nodesQueue.empty();)
+        {
+            p = nodesQueue.front();
+            nodesQueue.pop();
+            q = nodesQueue.front();
+            nodesQueue.pop();
+
+            if(nullptr == p && nullptr == q) continue;
+            if(nullptr == p || nullptr == q ) return false;
+            if(p->val != q->val) return false;
+
+            nodesQueue.push(p->left);
+            nodesQueue.push(q->right);
+
+            nodesQueue.push(p->right);
+            nodesQueue.push(q->left);
+        }
         return true;
     }
 };
@@ -241,5 +288,6 @@ int main()
     test({1, 2, 2, 2, NIL, 2}, false);
     test({5,4,1,NIL,1,NIL,4,2,NIL,2,NIL}, false);
     test({2,3,3,4,5,5,4,NIL,NIL,8,9,9,8}, true);
+    test({9,-42,-42,NIL,76,76,NIL,NIL,13,NIL,13}, false);
     return 0;
 }
