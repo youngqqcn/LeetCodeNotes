@@ -65,3 +65,4 @@ src/0090_subsets_ii/subsets_ii
 src/0093_restore_ip_addresses/restore_ip_addresses
 src/0096_unique_binary_search_trees/unique_binary_search_trees
 src/0098_validate_binary_search_tree/validate_binary_search_tree
+src/0101_symmetric_tree/symmetric_tree
