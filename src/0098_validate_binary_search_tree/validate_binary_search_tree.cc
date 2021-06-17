@@ -57,37 +57,42 @@ struct TreeNode
 
 // 思路:
 //   在左子树中找比当前节点大的, 在右子树中找比当前节点小的, 如果找到则不是二叉搜索树, 否则是的
+//   同时每个节点的左节点小于当前节点, 有节点大于当前节点,
+//   子树节点还要和根节点比较
+
+
+
+// 二叉搜索树, 中序遍历是有序的,  这个方法很巧妙, 实现起来非常简洁
 
 class Solution
 {
 private:
-    bool flag = true;
-    void recursive(TreeNode *cur, int minNum, int maxNum)
+    vector<int> nums;
+
+    // 中序遍历
+    void traverse(TreeNode *node)
     {
-        if(nullptr == cur) {
-            return;
-        }
+        if(nullptr == node) return;
 
-        if(minNum < cur->val && cur->val < maxNum) {
-            recursive(cur->left, minNum, cur->val);
-            if(!flag) return;
-            recursive(cur->right, cur->val,  maxNum);
-        }else{
-            flag = false;
-        }
-        return;
+        traverse(node->left);
+        nums.push_back(node->val);
+        traverse(node->right);
     }
-
 public:
     bool isValidBST(TreeNode *root)
     {
-        recursive(root, root->val - 1, root->val + 1 );
-        return flag;
+        nums.clear();
+        traverse(root);
+        for(int i = 0; i < nums.size() - 1; i++)
+        {
+            if(nums[i] >= nums[i+1]) return false;
+        }
+        return true;
     }
 };
 
-#define NIL (INT32_MIN)
-TreeNode *makeTree(vector<int> nodes)
+#define NIL (INT64_MIN)
+TreeNode *makeTree(vector<int64_t> nodes)
 {
     if (nodes.empty())
     {
@@ -95,7 +100,7 @@ TreeNode *makeTree(vector<int> nodes)
     }
 
     // 根据 nodes (前序遍历) 生成一棵树
-    TreeNode *root = new TreeNode(nodes[0]);
+    TreeNode *root = new TreeNode( int(nodes[0]));
     TreeNode *curNode = root;
 
     // [5,1,4,null,null,3,6]。      q [4]
@@ -107,12 +112,14 @@ TreeNode *makeTree(vector<int> nodes)
 
     queue<TreeNode *> q;
     q.push(curNode);
-     for (int i = 1; i < nodes.size() - 1; i += 2)
+    for (int i = 1; i < nodes.size(); )
     {
         curNode = q.front();
         q.pop();
-        curNode->left = (nodes[i] == NIL) ? (nullptr) : new TreeNode(nodes[i]);
-        curNode->right = (nodes[i + 1] == NIL) ? (nullptr) : new TreeNode(nodes[i + 1]);
+        curNode->left = (nodes[i] == NIL) ? (nullptr) : new TreeNode(int(nodes[i]));
+        if(i + 1 >= nodes.size()) break;
+        curNode->right = (nodes[i + 1] == NIL) ? (nullptr) : new TreeNode(int(nodes[i + 1]));
+        i += 2;
 
         if(nullptr != curNode->left ) {
             q.push(curNode->left);
@@ -124,7 +131,7 @@ TreeNode *makeTree(vector<int> nodes)
     return root;
 }
 
-void test(vector<int> tree, bool expected)
+void test(vector<long int> tree, bool expected)
 {
     TreeNode *root = makeTree(tree);
     Solution sol;
@@ -141,10 +148,11 @@ void test(vector<int> tree, bool expected)
 
 int main()
 {
-    // test({5, 1, 4, NIL, NIL, 3, 6, NIL, 4, 7, 8}, false);
+    test({5, 1, 4, NIL , NIL, 3, 6, NIL, 4, 7, 8}, false);
     test({5,4,6,NIL,NIL,3,7}, false);
-    // test({2,1,3}, true);
-    // test({2,2,2}, false);
-    cout << "hello world" << endl;
+    test({2,1,3}, true);
+    test({2,2,2}, false);
+    test({2147483647,2147483647}, false);
+    // cout << "hello world" << endl;
     return 0;
 }
