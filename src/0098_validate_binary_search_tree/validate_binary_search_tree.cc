@@ -9,6 +9,10 @@
 #include <algorithm>
 #include <memory>
 #include <queue>
+
+
+#include "make_tree.h"
+
 using namespace std;
 
 /*
@@ -91,49 +95,9 @@ public:
     }
 };
 
-#define NIL (INT64_MIN)
-TreeNode *makeTree(vector<int64_t> nodes)
-{
-    if (nodes.empty())
-    {
-        return nullptr;
-    }
-
-    // 根据 nodes (前序遍历) 生成一棵树
-    TreeNode *root = new TreeNode( int(nodes[0]));
-    TreeNode *curNode = root;
-
-    // [5,1,4,null,null,3,6]。      q [4]
-    //     5
-    //   /   \
-    //  1      4
-    // / \    /  \
-    //n   n  3    6
-
-    queue<TreeNode *> q;
-    q.push(curNode);
-    for (int i = 1; i < nodes.size(); )
-    {
-        curNode = q.front();
-        q.pop();
-        curNode->left = (nodes[i] == NIL) ? (nullptr) : new TreeNode(int(nodes[i]));
-        if(i + 1 >= nodes.size()) break;
-        curNode->right = (nodes[i + 1] == NIL) ? (nullptr) : new TreeNode(int(nodes[i + 1]));
-        i += 2;
-
-        if(nullptr != curNode->left ) {
-            q.push(curNode->left);
-        }
-        if(nullptr != curNode->right) {
-            q.push(curNode->right);
-        }
-    }
-    return root;
-}
-
 void test(vector<long int> tree, bool expected)
 {
-    TreeNode *root = makeTree(tree);
+    TreeNode *root = makeTree<TreeNode>(tree);
     Solution sol;
     bool result = sol.isValidBST(root);
     if (expected != result)

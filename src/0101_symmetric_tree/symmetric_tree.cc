@@ -9,6 +9,8 @@
 #include <algorithm>
 #include <memory>
 #include <queue>
+
+#include "make_tree.h"
 using namespace std;
 
 /*
@@ -267,7 +269,7 @@ TreeNode *makeTree(vector<int64_t> nodes)
 
 void test(vector<long int> tree, bool expected)
 {
-    TreeNode *root = makeTree(tree);
+    TreeNode *root = makeTree<TreeNode>(tree);
     Solution sol;
     bool result = sol.isSymmetric(root);
     if (expected != result)

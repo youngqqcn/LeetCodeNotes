@@ -9,7 +9,7 @@ import os
 HEADER_TEMPLATE = """\
 // author: yqq
 // date: {}
-// descriptions: 
+// descriptions:
 """
 
 
@@ -21,6 +21,8 @@ CPP_TEMPLATE = """\
 #include <set>
 #include <algorithm>
 #include <memory>
+#include <queue>
+#include <stack>
 using namespace std;
 
 
@@ -66,7 +68,7 @@ MAKEFILE_TEMPLATE = """include ../../Comman.mk"""
 
 def check_projectname(project_name):
     """
-    项目名必须符合格式: [0-9]{4}_.*  
+    项目名必须符合格式: [0-9]{4}_.*
     """
     ret = re.findall('[0-9]{4}_.*', project_name)
     try:
@@ -106,7 +108,7 @@ def main(project_name):
         f = open(filepath, 'w')
         f.write(code)
         f.close()
-    
+
     # 忽略可执行文件(包括调试)
     with open('.gitignore', 'a+') as f:
         f.write(os.path.join(os.path.join('src/', project_name), filename )+ '\n')
