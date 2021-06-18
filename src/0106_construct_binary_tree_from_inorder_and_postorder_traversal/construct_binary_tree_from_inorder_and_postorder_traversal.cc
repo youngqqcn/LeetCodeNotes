@@ -10,8 +10,7 @@
 #include <memory>
 #include <queue>
 #include <stack>
-
-#include "make_tree.h"
+#include "../include/make_tree.h"
 using namespace std;
 
 
@@ -44,7 +43,7 @@ using namespace std;
 class Solution {
 private:
 #if 0
-    // 这种方式比较简洁, 但是, 右很多数据拷贝
+    // 这种方式比较简洁, 但是, 有很多数据拷贝 , leetcode 超时
     TreeNode* build(vector<int> inorder, vector<int> postorder)
     {
         // 递归终止
@@ -127,6 +126,8 @@ void test(vector<int> inorder, vector<int> postorder)
 {
     Solution sol;
     TreeNode *root= sol.buildTree(inorder, postorder);
+
+    // ======= 打断点, 查看结果是否正确
     if(root == nullptr){
         cout << "FAILED" << endl;
     }
@@ -134,7 +135,7 @@ void test(vector<int> inorder, vector<int> postorder)
 
 int main()
 {
-    // test({9,3,15,20,7}, {9,15,7,20,3});
+    test({9,3,15,20,7}, {9,15,7,20,3});
     test({2,1},{2,1});
     cout << "hello world" << endl;
     return 0;

@@ -10,8 +10,7 @@
 #include <memory>
 #include <queue>
 #include <stack>
-
-#include "make_tree.h"
+#include "../include/make_tree.h"
 using namespace std;
 
 
