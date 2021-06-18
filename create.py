@@ -119,4 +119,6 @@ def main(project_name):
 if __name__ == '__main__':
     assert len(sys.argv) == 2
     project_name = str(sys.argv[1]).strip()
+    # 将所有 '-' 换乘下划线
+    project_name = project_name.replace('-', '_')
     main(project_name)
