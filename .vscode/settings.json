@@ -51,7 +51,8 @@
         "limits": "cpp",
         "new": "cpp",
         "stdexcept": "cpp",
-        "cinttypes": "cpp"
+        "cinttypes": "cpp",
+        "stack": "cpp"
     },
     "editor.trimAutoWhitespace": false
 }
