@@ -70,7 +70,7 @@ class Solution {
         return min(mindepth_v1(root->left), mindepth_v1(root->right)) + 1;
     }
 
-    // TODO: 使用迭代法,  层序遍历
+    // 使用迭代法,  层序遍历
     int mindepth(TreeNode * root)
     {
         int depth = 1;
