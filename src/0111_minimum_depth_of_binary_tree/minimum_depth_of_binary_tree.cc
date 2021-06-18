@@ -63,14 +63,32 @@ class Solution {
     {
         return  (nullptr == node->left)  && (nullptr == node->right);
     }
-    int mindepth(TreeNode *root)
+    int mindepth_v1(TreeNode *root)
     {
         if(nullptr == root) return  INT32_MAX;
         if(isLeafNode(root)) return 1;
-        return min(mindepth(root->left), mindepth(root->right)) + 1;
+        return min(mindepth_v1(root->left), mindepth_v1(root->right)) + 1;
     }
 
-    // TODO: 使用迭代法
+    // TODO: 使用迭代法,  层序遍历
+    int mindepth(TreeNode * root)
+    {
+        int depth = 1;
+        queue<TreeNode*> q;
+        q.push(root);
+        for(; !q.empty(); depth++)
+        {
+            int curLevelSize = q.size();
+            for(int i = 0; i < curLevelSize; i++)
+            {
+                TreeNode *cur = q.front(); q.pop();
+                if(isLeafNode(cur)) return depth; // 如果是叶子节点, 返回
+                if(nullptr != cur->left) q.push(cur->left);
+                if(nullptr != cur->right) q.push(cur->right);
+            }
+        }
+        return depth;
+    }
 
 public:
     int minDepth(TreeNode* root) {
