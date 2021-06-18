@@ -38,11 +38,13 @@ using namespace std;
 
 // 思路:
 //   1. 后序遍历的最后一个元素就是整棵树的根节点
-//   2. 得知根节点之后, 假设根节点为r, 根据中序遍历, 在中序遍历序列中r左边的,即[0:r] 就是左子树的元素, r右边的,即[r:size]就是右子树的元素
+//   2. 得知根节点之后, 假设根节点为r, 根据中序遍历, 在中序遍历序列中r左边的,即[0:r] 就是左子树的元素, r右边的,即[r : size-1]就是右子树的元素
 //   3. 对序列第2步中的[0:r] , [r:size]重复 第1, 2步操作, 直到[0:r] 和 [r:size]为空
 
 class Solution {
 private:
+#if 0
+    // 这种方式比较简洁, 但是, 右很多数据拷贝
     TreeNode* build(vector<int> inorder, vector<int> postorder)
     {
         // 递归终止
@@ -76,12 +78,46 @@ private:
         root->right = build(rightInorder, rightPostorder);
         return root;
     }
+#endif
+
+    TreeNode* build(vector<int> &inorder, int inStart, int inEnd, vector<int> &postorder, int postStart, int postEnd)
+    {
+        // 递归终止
+        if(inStart > inEnd || postStart > postEnd) {
+            return nullptr;
+        }
+        if(inEnd - inStart == 0 && postEnd - postStart == 0 ) {
+            return new TreeNode(inorder[inEnd]);
+        }
+
+        // 1. 从postOrder中找出最后一个元素作为根节点
+        int rootNumber = postorder[postEnd];
+        TreeNode* root = new TreeNode(rootNumber);
+
+        // 2. 根据 rootNumber 将inorder一分为二, rootNumber左边的序列是左子树的元素, rootNumber右边的序列是右子树的元素
+        // 在 inorder中找出 rootNumber 的下标rootIndex,
+        // 然后, inorder[0: rootInex] 就是左子树的, inorder[rootInex: size] 就是右子树的
+        // 然后, postorder[0 : rootInex) 就是左子树的, postorder[rootInex: size - 1] 就是右子树的,
+        int rootIndex = 0;
+        for(; rootIndex < inEnd - inStart + 1 && rootNumber != inorder[inStart + rootIndex];  rootIndex++) {
+        }
+
+        // 3.递归, 为了避免数据拷贝导致 leetcode执行超时, 需要计算左右的索引
+        int leftInStart = inStart;  int leftPostStart = postStart;
+        int leftInEnd = inStart + rootIndex-1; int leftPostEnd = postStart+rootIndex-1;
+        int rightInStart = inStart+rootIndex+1 ; int rightPostStart = postStart+rootIndex;
+        int rightInEnd = inEnd;  int rightPostEnd = postEnd - 1 ;
+        root->left = build(inorder, leftInStart, leftInEnd, postorder, leftPostStart, leftPostEnd);
+        root->right = build(inorder, rightInStart, rightInEnd,  postorder, rightPostStart, rightPostEnd);
+        return root;
+    }
 
 public:
     TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
-        vector<int> in(inorder.begin(), inorder.end());
-        vector<int> post(postorder.begin(), postorder.end());
-        return build(in, post);
+        // vector<int> in(inorder.begin(), inorder.end());
+        // vector<int> post(postorder.begin(), postorder.end());
+        // return build(in, post);
+        return build(inorder, 0, inorder.size() - 1 , postorder, 0, postorder.size() - 1);
     }
 };
 
@@ -98,7 +134,8 @@ void test(vector<int> inorder, vector<int> postorder)
 
 int main()
 {
-    test({9,3,15,20,7}, {9,15,7,20,3});
+    // test({9,3,15,20,7}, {9,15,7,20,3});
+    test({2,1},{2,1});
     cout << "hello world" << endl;
     return 0;
 }
