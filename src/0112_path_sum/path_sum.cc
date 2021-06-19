@@ -10,6 +10,7 @@
 #include <memory>
 #include <queue>
 #include <stack>
+#include <tuple>
 
 #include "../include/make_tree.h"
 using namespace std;
@@ -81,27 +82,28 @@ class Solution {
     }
 
     // TODO: 迭代法, 类似层序遍历
-    // FIXME: ========================
     bool pathSum(TreeNode *node, int sum, int targetSum)
     {
-        queue<TreeNode*> q;
-        q.push(node);
-        int sum1 = 0, sum2 = 0;
+        queue<tuple<TreeNode*, int>> q;
+        q.push(make_tuple(node, node->val));
         for(; !q.empty(); )
         {
             int curLevelSize = q.size();
             for(int i = 0; i < curLevelSize; i++)
             {
-                TreeNode *cur  = q.front(); q.pop();
-                if(sum + cur->val == targetSum && isLeafNode(cur)) return true;
-                if( nullptr != cur->left) q.push(cur->left);
-                if( nullptr != cur->right) q.push(cur->right);
+                tuple<TreeNode *, int> curTp  = q.front(); q.pop();
+                TreeNode *cur = std::get<0>(curTp);
+                int sum = std::get<1>(curTp);
+                if(sum == targetSum && isLeafNode(cur)) return true;
+                if( nullptr != cur->left) q.push( make_tuple(cur->left, sum + cur->left->val) );
+                if( nullptr != cur->right) q.push( make_tuple(cur->right, sum + cur->right->val) );
             }
         }
         return false;
     }
 public:
     bool hasPathSum(TreeNode* root, int targetSum) {
+        if(nullptr == root) return false;
         return  pathSum(root, 0, targetSum);
     }
 };
@@ -121,9 +123,11 @@ void test(vector<long int> nums, int targetSum , bool expected)
 
 int main()
 {
-    test({5,4,8,11,null,13,4,7,2,null,null,null,1}, 22, true);
-    test({1,2,3}, 5, false);
-    test({1,2}, 0, false);
+    // test({5,4,8,11,null,13,4,7,2,null,null,null,1}, 22, true);
+    // test({1,2,3}, 5, false);
+    // test({1,2}, 0, false);
+    // test({}, 1, false);
+    test({1,2}, 2, false);
 
     cout << "hello world" << endl;
     return 0;
