@@ -49,7 +49,7 @@ class Solution {
 public:
     // 如果时间复杂度是 O(n^2) leetcode会超时
     // 这里使用贪心算法, 时间复杂度为O(n)
-    int maxProfit(vector<int>& prices)
+    int maxProfit_v0(vector<int>& prices)
     {
         if(prices.empty()) return 0;
 
@@ -84,6 +84,26 @@ public:
     }
 
     // TODO: 动态规划解法
+    int maxProfit(vector<int>& prices)
+    {
+        if(prices.size() < 2) return 0;
+
+
+        // dp[i][0] 表示第i天当前持有股票,最多总现金(为了容易理解,不用"资产",而用现金)
+        // dp[i][1] 表示第i天不持有股票,最多总现金
+        vector<vector<int>> dp(prices.size(), vector<int>(2, 0));
+        dp[0][0] = -prices[0];
+        dp[0][1] = 0;
+        for(int i = 1; i < dp.size(); i++)
+        {
+            // max(昨天就持有股票, 昨天没有持有股票今天以prices[i]价格买入了)
+            dp[i][0] = max(dp[i - 1][0], -prices[i]);
+
+            // max(昨天就不持有, 昨天持有今天以prices[i]价格卖掉了)
+            dp[i][1] = max(dp[i - 1][1], dp[i-1][0] + prices[i]); // dp[i-1][0]表示昨天持有
+        }
+        return dp[dp.size()-1][1];
+    }
 };
 
 
@@ -93,7 +113,7 @@ void test(vector<int> prices, int expected)
     auto result = sol.maxProfit(prices);
     if(result != expected)
     {
-        cout << "FAILED"  << " expected " << expected << " got" << result << endl;
+        cout << "FAILED"  << " expected " << expected << " got " << result << endl;
     }
     else
     {
