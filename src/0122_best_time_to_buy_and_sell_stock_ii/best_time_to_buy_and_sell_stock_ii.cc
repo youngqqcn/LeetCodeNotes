@@ -108,12 +108,30 @@ public:
         return result;
     }
 
-    // 动态规划
-    int maxProfit(vector<int> &prices)
+    // TODO: 动态规划解法
+    int maxProfit(vector<int>& prices)
     {
-        
+        if(prices.size() < 2) return 0;
 
+        // dp[i][0] 表示第i天当前持有股票,最多总现金(为了容易理解,不用"资产",而用现金)
+        // dp[i][1] 表示第i天不持有股票,最多总现金
+
+        // 此题和0121不同的是, 可以多次买入卖出,
+        // 那么, dp[i-1][1] 的只可以作为 dp[i][0] 使用
+        vector<vector<int>> dp(prices.size(), vector<int>(2, 0));
+        dp[0][0] = -prices[0];
+        dp[0][1] = 0;
+        for(int i = 1; i < dp.size(); i++)
+        {
+            // max(昨天就持有股票, 昨天没有持有股票今天以prices[i]价格买入了, )
+            dp[i][0] = max({dp[i - 1][0], -prices[i] + dp[i-1][1]});
+
+            // max(昨天就不持有, 昨天持有今天以prices[i]价格卖掉了)
+            dp[i][1] = max(dp[i - 1][1], dp[i-1][0] + prices[i]); // dp[i-1][0]表示昨天持有
+        }
+        return dp[dp.size()-1][1];
     }
+
 };
 
 void test(vector<int> prices, int expected)
