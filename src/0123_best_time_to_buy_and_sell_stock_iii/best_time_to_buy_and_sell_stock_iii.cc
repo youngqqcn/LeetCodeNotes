@@ -68,6 +68,9 @@ using namespace std;
     4.在完成了一笔交易的前提下，进行了第二次买操作；
     5.完成了全部两笔交易。
 
+
+这里统一使用 "利润" 的概念来说明, 而不是使用leetcode-master中的"最多现金"的概念. "利润"
+
 */
 
 
@@ -75,16 +78,25 @@ using namespace std;
 class Solution
 {
 public:
-    // 暴力
     int maxProfit(vector<int> &prices)
     {
-        vector<vector<int>> profits;
-        for(int i = 0; i < prices.size(); i++) {
-            vector<int> profit;
-            for(int j = i+1; j < prices.size(); j++) {
-                profit.push_back( prices[j] - prices[i]);
-            }
+        if(prices.size() < 2) return 0;
+        // 因为 不操作的状态, 不影响利润, 没必要记录, 所以, 只需计算4状态的转移
+        // 同一天可以多次买入卖出, 因为同一天的价格相同, 不会最终的利润
+        int buy1 = -prices[0], sell1 = 0;
+
+        // 即第一天买了之后,马上又进行第二次卖出, 利润为0
+        int buy2 = -prices[1], sell2 = 0;
+
+        for(int i = 1; i < prices.size(); i++)
+        {
+            buy1 = max(buy1, -prices[i]);
+            sell1 = max(sell1, buy1 + prices[i]);
+            buy2 = max(buy2, sell1 - prices[i]);
+            sell2 = max(sell2, buy2 + prices[i]);
         }
+
+        return sell2;
     }
 };
 
