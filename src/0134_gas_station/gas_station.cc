@@ -84,7 +84,8 @@ public:
     }
 
 
-    int canCompleteCircuit(vector<int> &gas, vector<int> &cost)
+    // 暴力搜索
+    int canCompleteCircuit_v1(vector<int> &gas, vector<int> &cost)
     {
         for(int startStation = 0; startStation < gas.size(); startStation++)
         {
@@ -93,6 +94,24 @@ public:
             }
         }
         return -1;
+    }
+
+    // 贪心算法
+    int canCompleteCircuit(vector<int> &gas, vector<int> &cost)
+    {
+        int curSum = 0;
+        int totalSum = 0;
+        int start = 0;
+        for (int i = 0; i < gas.size(); i++) {
+            curSum += gas[i] - cost[i];
+            totalSum += gas[i] - cost[i];
+            if (curSum < 0) {   // 当前累加rest[i]和 curSum一旦小于0
+                start = i + 1;  // 起始位置更新为i+1
+                curSum = 0;     // curSum从0开始
+            }
+        }
+        if (totalSum < 0) return -1; // 说明怎么走都不可能跑一圈了
+        return start;
     }
 };
 
