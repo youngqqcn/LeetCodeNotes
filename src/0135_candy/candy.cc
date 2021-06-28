@@ -53,7 +53,11 @@ public:
 
         if (ratings[i - 1] < ratings[i] && ratings[i] < ratings[i + 1])
         {
-            dp[i] = min(dp[i - 1] + 1, dp[i + 1] - 1);
+            return min(dpFunc(ratings, i - 1, dp) + 1, dpFunc(ratings, i + 1, dp) - 1);
+        }
+        else if (ratings[i - 1] < ratings[i] && ratings[i] > ratings[i + 1])
+        {
+            return max(dpFunc(ratings, i + 1, dp) + 1, dpFunc(ratings, i - 1, dp) + 1);
         }
     }
 
