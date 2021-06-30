@@ -230,7 +230,7 @@ public:
         // cout << "check ok" << endl;
     }
 
-    int candy(vector<int> &ratings)
+    int candy_v1(vector<int> &ratings)
     {
         int sum = 0;
         vector<int> dp(ratings.size(), INT32_MIN);
@@ -247,6 +247,31 @@ public:
         // check(dp, ratings);
         return sum;
     }
+
+    // 使用贪心算法, 两次遍历
+    // 非常妙: https://leetcode-cn.com/problems/candy/solution/fen-fa-tang-guo-by-leetcode-solution-f01p/
+    int candy(vector<int> &ratings)
+    {
+        vector<int> cd(ratings.size(),  1);
+        for(int i = 1; i < cd.size(); i++)
+        {
+            if(ratings[i - 1] < ratings[i]) {
+                cd[i] =  cd[i - 1] +  1;
+            }
+        }
+
+        for(int i = cd.size() - 2; i >= 0; i--)
+        {
+            if(ratings[i] > ratings[i + 1]) {
+                cd[i] = max(cd[i], cd[i + 1] + 1);
+            }
+        }
+
+        int sum = 0;
+        for_each(cd.begin(), cd.end(), [&sum](int n){ sum += n;});
+        return sum;
+    }
+
 };
 
 void test(vector<int> ratings, int expected)
