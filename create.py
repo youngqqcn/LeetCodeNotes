@@ -23,6 +23,9 @@ CPP_TEMPLATE = """\
 #include <memory>
 #include <queue>
 #include <stack>
+#include <unordered_set>
+#include <unordered_map>
+#include <string.h>
 using namespace std;
 
 
