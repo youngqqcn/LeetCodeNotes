@@ -9,6 +9,8 @@ typedef struct _List
     struct _List *prev;
 } List;
 
+
+
 List *split(char *s, int *wordCount, int *size)
 {
     *wordCount = 0;
@@ -19,7 +21,7 @@ List *split(char *s, int *wordCount, int *size)
     int i = 0;
     for (; i < strlen(s);)
     {
-        if (s[i] == ' '/* || s[i] == '\n' || s[i] == '\t'*/)
+        if (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
         {
             i++;
             continue;
@@ -28,7 +30,7 @@ List *split(char *s, int *wordCount, int *size)
         char str[1024] = {0};
         memset(str, 0, sizeof(str));
         int idx = 0;
-        while (i < strlen(s) && !(s[i] == ' ' /*|| s[i] == '\n' || s[i] == '\t'*/))
+        while (i < strlen(s) && !(s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
         {
             str[idx++] = s[i];
             i++;
@@ -97,7 +99,8 @@ char *reverseWords(char *s)
 
 int main()
 {
-    FILE *fp = fopen("input.txt", "r");
+    // FILE *fp = fopen("input.txt", "r");
+    FILE *fp = fopen("/home/yqq/下载/problem_0720/2.in", "r");
     if(NULL == fp) {
         printf("open input.txt error\n");
         return 1;
