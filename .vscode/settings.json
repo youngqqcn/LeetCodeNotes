@@ -52,7 +52,8 @@
         "new": "cpp",
         "stdexcept": "cpp",
         "cinttypes": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "stdlib.h": "c"
     },
     "editor.trimAutoWhitespace": false
 }

@@ -26,6 +26,7 @@ CPP_TEMPLATE = """\
 #include <unordered_set>
 #include <unordered_map>
 #include <string.h>
+#include <stdlib.h>
 using namespace std;
 
 
