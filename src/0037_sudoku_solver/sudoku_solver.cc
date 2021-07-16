@@ -15,14 +15,18 @@ class Solution
 private:
     bool backtracking(vector<vector<char>> &board)
     {
+        // 遍历行
         for (int i = 0; i < board.size(); i++)
-        { // 遍历行
+        {
+            // 遍历列
             for (int j = 0; j < board[0].size(); j++)
-            { // 遍历列
+            {
                 if (board[i][j] != '.')
                     continue;
+
+                // (i, j) 这个位置放k是否合适
                 for (char k = '1'; k <= '9'; k++)
-                { // (i, j) 这个位置放k是否合适
+                {
                     if (isValid(i, j, k, board))
                     {
                         board[i][j] = k; // 放置k
@@ -34,28 +38,33 @@ private:
                 return false; // 9个数都试完了，都不行，那么就返回false
             }
         }
-        return true; // 遍历完没有返回false，说明找到了合适棋盘位置了
+        // 遍历完没有返回false，说明找到了合适棋盘位置了
+        return true;
     }
     bool isValid(int row, int col, char val, vector<vector<char>> &board)
     {
+        // 判断行里是否重复
         for (int i = 0; i < 9; i++)
-        { // 判断行里是否重复
+        {
             if (board[row][i] == val)
             {
                 return false;
             }
         }
+        // 判断列里是否重复
         for (int j = 0; j < 9; j++)
-        { // 判断列里是否重复
+        {
             if (board[j][col] == val)
             {
                 return false;
             }
         }
+
+        // 判断9方格里是否重复
         int startRow = (row / 3) * 3;
         int startCol = (col / 3) * 3;
         for (int i = startRow; i < startRow + 3; i++)
-        { // 判断9方格里是否重复
+        {
             for (int j = startCol; j < startCol + 3; j++)
             {
                 if (board[i][j] == val)
@@ -78,9 +87,12 @@ void test(vector<vector<char>> &board, vector<vector<char>> &expected)
 {
     Solution sol;
     sol.solveSudoku(board);
-    if(board != expected){
+    if (board != expected)
+    {
         cout << "FAILED" << endl;
-    }else {
+    }
+    else
+    {
         cout << "PASSED" << endl;
     }
 }
