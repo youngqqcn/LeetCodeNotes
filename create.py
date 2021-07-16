@@ -14,7 +14,9 @@ HEADER_TEMPLATE = """\
 
 
 CPP_TEMPLATE = """\
+#include <bits/stdc++.h>
 #include <iostream>
+#include <numeric>
 #include <vector>
 #include <string>
 #include <map>
@@ -31,11 +33,14 @@ using namespace std;
 
 
 
+void test()
+{
 
+}
 
 int main()
 {
-    cout << "hello world" << endl;
+
     return 0;
 }
 
