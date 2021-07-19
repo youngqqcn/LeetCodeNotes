@@ -99,7 +99,8 @@ void test(vector<vector<char>> &board, vector<vector<char>> &expected)
 
 int main()
 {
-    auto board = vector<vector<char>>(
+    {
+        auto board = vector<vector<char>>(
         {{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
          {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
          {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
@@ -122,6 +123,9 @@ int main()
          {'3', '4', '5', '2', '8', '6', '1', '7', '9'}});
 
     test(board, expected);
+
+    }
+
 
     cout << "hello world" << endl;
     return 0;

@@ -6,7 +6,7 @@ typedef int bool;
 #define false (0)
 #define true (1)
 
-bool isValid(int row, int col, char val, char (*board)[9])
+bool isValid(int row, int col, char val, char **board)
 {
     // 判断行里是否重复
     for (int i = 0; i < 9; i++)
@@ -42,7 +42,7 @@ bool isValid(int row, int col, char val, char (*board)[9])
     return true;
 }
 
-bool backtracking(char board[][9], int rowSize, int colSize)
+bool backtracking(char **board, int rowSize, int colSize)
 {
     // char (*bd)[9] = (char (*)[9])board;
     // 遍历行
@@ -71,44 +71,135 @@ bool backtracking(char board[][9], int rowSize, int colSize)
     return true; // 遍历完没有返回false，说明找到了合适棋盘位置了
 }
 
-
-void solveSudoku(char (*board)[9], int boardRowSize, int *boardColSize)
+// void solveSudoku(char (*board)[9], int boardRowSize, int *boardColSize)
+void solveSudoku(char **board, int boardRowSize, int *boardColSize)
 {
     backtracking(board, 9, 9);
 }
 
+
+// void readFile(char *filename, char **board, int rowSize, int colSize)
+// {
+//     FILE *fp = fopen(filename, "r");
+//     if(NULL == fp) {
+//         printf("error fopen\n");
+//         return;
+//     }
+
+//     if(NULL == board) {
+//         board = (char **)calloc(rowSize * colSize, 1);
+//     }
+
+//     for(int i = 0; i < rowSize; i++)
+//     {
+//         int ret = fgets(board[i], 9, fp);
+//         if(ret <= 0) break;
+//     }
+//     fclose(fp);
+// }
+
 int test()
 {
     {
-        char board[][9] = {
-            {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
-            {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
-            {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
-            {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
-            {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
-            {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
-            {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
-            {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
-            {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
+        char *constBoard[] = {
+            "53..7....",
+            "6..195...",
+            ".98....6.",
+            "8...6...3",
+            "4..8.3..1",
+            "7...2...6",
+            ".6....28.",
+            "...419..5",
+            "....8..79"};
 
-        char expected[][9] = {
-            {'5', '3', '4', '6', '7', '8', '9', '1', '2'},
-            {'6', '7', '2', '1', '9', '5', '3', '4', '8'},
-            {'1', '9', '8', '3', '4', '2', '5', '6', '7'},
-            {'8', '5', '9', '7', '6', '1', '4', '2', '3'},
-            {'4', '2', '6', '8', '5', '3', '7', '9', '1'},
-            {'7', '1', '3', '9', '2', '4', '8', '5', '6'},
-            {'9', '6', '1', '5', '3', '7', '2', '8', '4'},
-            {'2', '8', '7', '4', '1', '9', '6', '3', '5'},
-            {'3', '4', '5', '2', '8', '6', '1', '7', '9'}};
+        char *expected[] = {
+            "534678912",
+            "672195348",
+            "198342567",
+            "859761423",
+            "426853791",
+            "713924856",
+            "961537284",
+            "287419635",
+            "345286179"};
 
         int rowSize = 9, colSize = 9;
-        solveSudoku(board, rowSize, &colSize);
-        if (0 != memcmp(board, expected, rowSize * colSize))
+
+        // 将字符串从 .text区(不可修改), 拷贝到内存(可修改)
+        char **board = (char **)calloc(rowSize, sizeof(char *));
+        for(int i = 0; i < rowSize; i++)
         {
-            printf("error 1\n");
-            return 0;
+            board[i] = (char *)calloc(strlen(constBoard[i]), 1);
+            memcpy(board[i], constBoard[i], strlen(constBoard[i]));
         }
+
+        solveSudoku(board, rowSize, &colSize);
+        for(int i = 0; i < rowSize; i++)
+        {
+            if (0 != memcmp(board[i], expected[i], strlen(expected[i])) )
+            {
+                printf("error 1\n");
+                return 0;
+            }
+        }
+
+        //  释放内存
+        for(int i = 0; i < rowSize; i++)
+        {
+            free(board[i]);
+        }
+        free(board);
+    }
+
+    {
+        char *constBoard[] = {
+            "..9748...",
+            "7........",
+            ".2.1.9...",
+            "..7...24.",
+            ".64.1.59.",
+            ".98...3..",
+            "...8.3.2.",
+            "........6",
+            "...2759.."};
+
+        char *expected[] = {
+            "519748632",
+            "783652419",
+            "426139875",
+            "357986241",
+            "264317598",
+            "198524367",
+            "975863124",
+            "832491756",
+            "641275983"};
+
+         int rowSize = 9, colSize = 9;
+
+        // 将字符串从 文字常量区(不可修改), 拷贝到内存(可修改)
+        char **board = (char **)calloc(rowSize, sizeof(char *));
+        for(int i = 0; i < rowSize; i++)
+        {
+            board[i] = (char *)calloc(strlen(constBoard[i]), 1);
+            memcpy(board[i], constBoard[i], strlen(constBoard[i]));
+        }
+
+        solveSudoku(board, rowSize, &colSize);
+        for(int i = 0; i < rowSize; i++)
+        {
+            if (0 != memcmp(board[i], expected[i], strlen(expected[i])) )
+            {
+                printf("error 1\n");
+                return 0;
+            }
+        }
+
+        //  释放内存
+        for(int i = 0; i < rowSize; i++)
+        {
+            free(board[i]);
+        }
+        free(board);
     }
     return 0;
 }
