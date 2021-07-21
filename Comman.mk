@@ -23,5 +23,6 @@ run:
 
 clean:
 	@ rm -f $(TARGET)
+	@ rm -f core a.out
 
 .PHONY:clean
