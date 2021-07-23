@@ -1,6 +1,6 @@
 // author: yqq
 // date: 2021-07-23 11:43:10
-// descriptions:
+// descriptions: https://leetcode-cn.com/problems/happy-number/
 #include <bits/stdc++.h>
 #include <iostream>
 #include <numeric>
