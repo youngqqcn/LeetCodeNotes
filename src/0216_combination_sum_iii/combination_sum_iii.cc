@@ -38,14 +38,69 @@ using namespace std;
 */
 
 class Solution {
+private:
+    int sum ;
+    set<vector<int>> result;
+    vector<int> path;
+
 public:
+
+    void backtracking_1(int start, int k, int n)
+    {
+        if(sum == n && path.size() == k) {
+            result.insert(path);
+            return;
+        }
+
+        for(int i = start; i <= 9; i++)
+        {
+            sum += i;
+            path.push_back(i);
+            backtracking(i+1, k, n);
+
+            // 回溯
+            sum -= i;
+            path.pop_back();
+        }
+    }
+
+     void backtracking(int start, int k, int n)
+    {
+        if(sum > n) return;
+
+        if(sum == n && path.size() == k) {
+            result.insert(path);
+            return;
+        }
+
+        // k - path.size()  是还需要的元素个数
+        for(int i = start; i <= 9 - (k - path.size()) + 1; i++)
+        {
+
+            sum += i;
+            path.push_back(i);
+            backtracking(i+1, k, n);
+
+            // 回溯
+            sum -= i;
+            path.pop_back();
+        }
+    }
+
     vector<vector<int>> combinationSum3(int k, int n)
     {
-        
+        // clean
+        // result.clear();
+
+        sum = 0;
+        path.clear();
+
+        backtracking(1, k, n);
+        return vector<vector<int>>(result.begin(), result.end());
     }
 };
 
-void test(int k, int n, unordered_set<vector<int>> expected )
+void test(int k, int n, set<vector<int>> expected )
 {
     Solution sol;
     auto result  = sol.combinationSum3(k, n);
@@ -71,7 +126,7 @@ void test(int k, int n, unordered_set<vector<int>> expected )
 
 int main()
 {
-    test(3, 7, {1,2,4});
+    test(3, 7, {{1,2,4}});
     test(3, 9, {{1, 2, 6}, {1, 3, 5}, {2, 3, 4}});
 
     return 0;
