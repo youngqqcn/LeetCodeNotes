@@ -69,7 +69,39 @@ using namespace std;
 */
 
 
+
+// 实现一个 单调队列 
+template <typename T>
+class MyQueue
+{
+private:
+    deque<T> _m_q;
+public:
+    void push(T value)
+    {
+        while(!_m_q.empty() && value > _m_q.back()){
+            _m_q.pop_back();
+        }
+        _m_q.push_back(value);
+    }
+
+    T front()
+    {
+        return _m_q.front();
+    }
+
+    void pop(T value)
+    {
+        if(!_m_q.empty() && value == _m_q.front()) {
+            _m_q.pop_front();
+        }
+    }
+};
+
 class Solution {
+
+private:
+    MyQueue<int> _myQueue;
 public:
     // 暴力方法, leetcode超时
     vector<int> maxSlidingWindow_v2(vector<int>& nums, int k)
@@ -89,7 +121,20 @@ public:
 
     vector<int> maxSlidingWindow(vector<int>& nums, int k)
     {
+        vector<int> result;
+        for(int i = 0; i < k; i++)
+        {
+            _myQueue.push(nums[i]);
+        }
 
+        result.push_back( _myQueue.front());
+        for(int i = k; i < nums.size(); i++)
+        {
+            _myQueue.pop(nums[i - k]);
+            _myQueue.push(nums[i]);
+            result.push_back( _myQueue.front());
+        }
+        return result;
     }
 };
 
@@ -130,6 +175,7 @@ int main()
     test({1, -1}, 1, {1, -1});
     test({9, 11}, 2, {11});
     test({4, -2}, 2, {4});
+    test({1,3,1,2,0,5}, 3, {3,3,2,5});  // [3,2,2,5]????
     return 0;
 }
 
