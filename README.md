@@ -102,7 +102,7 @@ C++,Golang,Rust,Python
 |  2021-07-30  |  [0279.完全平方数.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0279.%E5%AE%8C%E5%85%A8%E5%B9%B3%E6%96%B9%E6%95%B0.md)  | 100%  |    |   |
 |  2021-07-31  |  [0300.最长上升子序列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0300.%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97.md)  | 100%  |    |   |
 |  2021-08-01  |  [0309.最佳买卖股票时机含冷冻期.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0309.%E6%9C%80%E4%BD%B3%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E6%97%B6%E6%9C%BA%E5%90%AB%E5%86%B7%E5%86%BB%E6%9C%9F.md)  | 100%  |    |   |
-|  2021-08-02  |  [0322.零钱兑换.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0322.%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2.md)  |   |    |   |
+|  2021-08-02  |  [0322.零钱兑换.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0322.%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2.md)  | 100%  |    |   |
 |  2021-08-03  |  [0332.重新安排行程.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0332.%E9%87%8D%E6%96%B0%E5%AE%89%E6%8E%92%E8%A1%8C%E7%A8%8B.md)  |   |    |   |
 |  2021-08-04  |  [0337.打家劫舍III.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0337.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8DIII.md)  | 100%  |    |   |
 |  2021-08-05  |  [0343.整数拆分.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0343.%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86.md)  |   |    |   |
