@@ -103,3 +103,4 @@ src/0239_sliding_window_maximum/sliding_window_maximum
 src/0242_valid_anagram/valid_anagram
 src/0257_binary_tree_paths/binary_tree_paths
 src/0279_perfect_squares/perfect_squares
+src/0300_longest_increasing_subsequence/longest_increasing_subsequence
