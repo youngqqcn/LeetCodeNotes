@@ -111,7 +111,7 @@ C++,Golang,Rust,Python
 |  2021-08-08  |  [0349.两个数组的交集.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0349.%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86.md)  | 100%  |    |   |
 |  2021-08-09  |  [0376.摆动序列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0376.%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97.md)  | 100%  |    |   |
 |  2021-08-10  |  [0377.组合总和Ⅳ.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0377.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C%E2%85%A3.md)  | 100%  |    |   |
-|  2021-08-11  |  [0383.赎金信.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0383.%E8%B5%8E%E9%87%91%E4%BF%A1.md)  |   |    |   |
+|  2021-08-11  |  [0383.赎金信.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0383.%E8%B5%8E%E9%87%91%E4%BF%A1.md)  | 100%  |    |   |
 |  2021-08-12  |  [0392.判断子序列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0392.%E5%88%A4%E6%96%AD%E5%AD%90%E5%BA%8F%E5%88%97.md)  |   |    |   |
 |  2021-08-13  |  [0404.左叶子之和.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0404.%E5%B7%A6%E5%8F%B6%E5%AD%90%E4%B9%8B%E5%92%8C.md)  |   |    |   |
 |  2021-08-14  |  [0406.根据身高重建队列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0406.%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E5%88%97.md)  |   |    |   |
