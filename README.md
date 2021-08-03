@@ -114,7 +114,7 @@ C++,Golang,Rust,Python
 |  2021-08-11  |  [0383.赎金信.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0383.%E8%B5%8E%E9%87%91%E4%BF%A1.md)  | 100%  |    |   |
 |  2021-08-12  |  [0392.判断子序列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0392.%E5%88%A4%E6%96%AD%E5%AD%90%E5%BA%8F%E5%88%97.md)  | 100%  |    |   |
 |  2021-08-13  |  [0404.左叶子之和.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0404.%E5%B7%A6%E5%8F%B6%E5%AD%90%E4%B9%8B%E5%92%8C.md)  | 100%  |    |   |
-|  2021-08-14  |  [0406.根据身高重建队列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0406.%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E5%88%97.md)  |   |    |   |
+|  2021-08-14  |  [0406.根据身高重建队列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0406.%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E5%88%97.md)  | 100%  |    |   |
 |  2021-08-15  |  [0416.分割等和子集.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0416.%E5%88%86%E5%89%B2%E7%AD%89%E5%92%8C%E5%AD%90%E9%9B%86.md)  |   |    |   |
 |  2021-08-16  |  [0435.无重叠区间.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0435.%E6%97%A0%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4.md)  |   |    |   |
 |  2021-08-17  |  [0450.删除二叉搜索树中的节点.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0450.%E5%88%A0%E9%99%A4%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.md)  |   |    |   |
