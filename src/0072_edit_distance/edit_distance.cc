@@ -45,9 +45,6 @@ exection -> execution (插入 'u')
 0 <= word1.length, word2.length <= 500
 word1 和 word2 由小写英文字母组成
 
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/edit-distance
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
 
 class Solution {
@@ -58,8 +55,8 @@ public:
         vector<vector<int>> dp(word1.size() + 1, vector<int>(word2.size() + 1, 0));
 
         // 2.确定递推公式:
-        //  if( word1[i-1][j-1] == word2[i-1][j-1])   dp[i][j] = dp[i-1][j-1]
-        //  if( word1[i-1][j-1] != word2[i-1][j-1])
+        //  if( word1[i-1] == word2[j-1])   dp[i][j] = dp[i-1][j-1]
+        //  if( word1[i-1] != word2[j-1])
         //     在word1[i-1]增加:                    dp[i][j] = dp[i-1][j] + 1
         //                删除(相当于在word2中添加):  dp[i][j] = dp[i][j-1] + 1
         //                替换:                     dp[i][j] = d[i-1][j-1] + 1
