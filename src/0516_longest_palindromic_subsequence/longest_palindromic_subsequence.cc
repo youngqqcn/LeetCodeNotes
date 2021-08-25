@@ -52,7 +52,7 @@ public:
     //
     // 官方题解： https://leetcode-cn.com/problems/longest-palindromic-subsequence/solution/zui-chang-hui-wen-zi-xu-lie-by-leetcode-hcjqp/
     //
-    // 问： 为什么能用动归？
+    // 问： 为什么能用动态规划？
     //
     // 答： 对于一个子序列而言，如果它是回文子序列，并且长度大于 2，那么将它首尾的两个字符去除之后，
     //      它仍然是个回文子序列。
