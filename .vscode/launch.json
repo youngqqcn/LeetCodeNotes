@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "LeetCodeNotes_5066a676"
+        },
+        {
             "name": "g++-10 - 生成和调试活动文件",
             "type": "cppdbg",
             "request": "launch",
