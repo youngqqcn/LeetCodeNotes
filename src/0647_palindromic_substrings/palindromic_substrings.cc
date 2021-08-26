@@ -76,10 +76,48 @@ private:
         return result;
     }
 
-    // TODO: 动态规划
+    // 动态规划
+    // 回文字符串:  去掉第1个和最后1个字符后仍然是回文字符串, 因此，可以缩小问题的规模，符合动态规划的条件
+    // 此题和 回文子串 的不同之处在于，本题要求字符串是连续的，
+    //
+    //
+    // dp[i][j] 表示区间范围[i,j] （注意是左闭右闭）的子串是否是回文子串，如果是dp[i][j]为true，否则为false。
+    //
+    // 当s[i]与s[j]不相等，那没啥好说的了，dp[i][j]一定是false。
+    // 当s[i]与s[j]相等时，这就复杂一些了，有如下三种情况
+    //
+    // 情况一： 下标i 与 j相同，同一个字符例如a，当然是回文子串
+    // 情况二： 下标i 与 j相差为1，例如aa，也是文子串
+    // 情况三： 下标：i 与 j相差大于1的时候，例如cabac，此时s[i]与s[j]已经相同了，
+    //         我们看i到j区间是不是回文子串就看aba是不是回文就可以了，
+    //         那么aba的区间就是 i+1 与 j-1区间，这个区间是不是回文就看dp[i + 1][j - 1]是否为true。
+
     int search_v2(string s)
     {
-        return 0;
+        vector<vector<bool>> dp(s.size(), vector<bool>(s.size(), false));
+        int result = 0;
+
+        // 遍历顺序: 从下往上， 从左往右
+        for(int i = s.size() ; i >= 0; i--)
+        {
+            for(int j = i; j < s.size(); j++)
+            {
+                if(s[i] == s[j])
+                {
+                    if(i == j) { // 情况1
+                        dp[i][j] = true;
+                        result++;
+                    } else if(i + 1 == j) { // 情况2
+                        dp[i][j] = true;
+                        result++;
+                    } else if(dp[i + 1][j - 1]){ // 情况3
+                        dp[i][j] = true;
+                        result++;
+                    }
+                }
+            }
+        }
+        return result;
     }
 
 
@@ -87,7 +125,8 @@ public:
     // 此题和最长回文子串类似
     int countSubstrings(string s)
     {
-        return search(s);
+        // return search(s);
+        return search_v2(s);
     }
 };
 
