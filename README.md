@@ -143,7 +143,8 @@ C++,Golang,Rust,Python
 |  2021-09-05  |  [0654.最大二叉树.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0654.%E6%9C%80%E5%A4%A7%E4%BA%8C%E5%8F%89%E6%A0%91.md)  |  100% |    |   |
 |  2021-09-05  |  0657.机器人能否返回原点.md  | 100%  |    |   |
 |  2021-09-06  |  [0669.修剪二叉搜索树.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0669.%E4%BF%AE%E5%89%AA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91.md)  | 100%  |    |   |
-|  2021-09-07  |  [0674.最长连续递增序列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0674.%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97.md)  | 100%(妙啊)  |    |   |
+|  2021-09-06  |  0673.最长递增子序列的个数  | 100%(妙啊)  |    |   |
+|  2021-09-07  |  [0674.最长连续递增序列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0674.%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97.md)  | 100%  |    |   |
 |  2021-09-08  |  [0700.二叉搜索树中的搜索.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0700.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%90%9C%E7%B4%A2.md)  |   |    |   |
 |  2021-09-09  |  [0701.二叉搜索树中的插入操作.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0701.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C.md)  |   |    |   |
 |  2021-09-10  |  [0704.二分查找.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.md)  |   |    |   |
