@@ -148,7 +148,7 @@ C++,Golang,Rust,Python
 |  2021-09-07  |  684.冗余连接.md  | 100%(并查集)  |    |   |
 |  2021-09-07  |  685.冗余连接II.md  | 100% （并查集）  |    |   |
 |  2021-09-08  |  [0700.二叉搜索树中的搜索.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0700.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%90%9C%E7%B4%A2.md)  | 100%  |    |   |
-|  2021-09-09  |  [0701.二叉搜索树中的插入操作.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0701.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C.md)  |   |    |   |
+|  2021-09-09  |  [0701.二叉搜索树中的插入操作.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0701.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%AD%E7%9A%84%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C.md)  | 100%  |    |   |
 |  2021-09-10  |  [0704.二分查找.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.md)  |   |    |   |
 |  2021-09-11  |  [0707.设计链表.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0707.%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8.md)  |   |    |   |
 |  2021-09-12  |  [0714.买卖股票的最佳时机含手续费.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0714.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%E5%90%AB%E6%89%8B%E7%BB%AD%E8%B4%B9.md)  |   |    |   |
