@@ -2,12 +2,13 @@ all:cpp
 
 SOURCE=$(basename $(wildcard *.cc))
 TARGET=main
+FLAGS=-g -fsanitize=address -fsanitize=leak
 
 echo:
 	echo $(SOURCE)
 
 cpp:clean
-	@g++ -g $(SOURCE).cc -o  $(TARGET) -std=c++2a
+	@g++ $(FLAGS) $(SOURCE).cc -o  $(TARGET) -std=c++2a
 	@$(MAKE) run
 
 go:clean
