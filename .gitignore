@@ -161,3 +161,4 @@ src/0724_find_pivot_index/find_pivot_index
 src/0738_monotone_increasing_digits/monotone_increasing_digits
 src/0739_daily_temperatures/daily_temperatures
 src/0746_min_cost_climbing_stairs/min_cost_climbing_stairs
+src/0763_partition_labels/partition_labels
