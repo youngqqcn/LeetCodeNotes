@@ -162,7 +162,8 @@ C++,Golang,Rust,Python
 |  2021-09-17  |  [0841.钥匙和房间 | 100%  |    |   |
 |  2021-09-17  |  [0844.比较含退格的字符串 | 100%  |    |   |
 |  2021-09-18  |  [0860.柠檬水找零.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0860.%E6%9F%A0%E6%AA%AC%E6%B0%B4%E6%89%BE%E9%9B%B6.md)  | 100%  |    |   |
-|  2021-09-19  |  [0922. 按奇偶排序数组II  | 100%  |    |   |
+|  2021-09-19  |  [0922.按奇偶排序数组II  | 100%  |    |   |
+|  2021-09-19  |  [0925.长按键入  | 100%  |    |   |
 |  2021-09-19  |  [0968.监控二叉树.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/0968.%E7%9B%91%E6%8E%A7%E4%BA%8C%E5%8F%89%E6%A0%91.md)  |   |    |   |
 |  2021-09-20  |  [1005.K次取反后最大化的数组和.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/1005.K%E6%AC%A1%E5%8F%96%E5%8F%8D%E5%90%8E%E6%9C%80%E5%A4%A7%E5%8C%96%E7%9A%84%E6%95%B0%E7%BB%84%E5%92%8C.md)  |   |    |   |
 |  2021-09-21  |  [1035.不相交的线.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/1035.%E4%B8%8D%E7%9B%B8%E4%BA%A4%E7%9A%84%E7%BA%BF.md)  |   |    |   |
