@@ -72,3 +72,15 @@ Tree *makeTree(vector<int64_t> nodes)
 }
 
 
+
+
+// 释放内存
+template <typename Tree=TreeNode>
+void freeTree(Tree *root)
+{
+    if(nullptr == root) return;
+
+    freeTree(root->left);
+    freeTree(root->right);
+    delete root;
+}
