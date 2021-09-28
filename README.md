@@ -170,6 +170,6 @@ C++,Golang,Rust,Python
 |  2021-09-20  |  [1002.查找共用字符| 100%  |    |   |
 |  2021-09-20  |  [1005.K次取反后最大化的数组和.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/1005.K%E6%AC%A1%E5%8F%96%E5%8F%8D%E5%90%8E%E6%9C%80%E5%A4%A7%E5%8C%96%E7%9A%84%E6%95%B0%E7%BB%84%E5%92%8C.md)  | 100%  |    |   |
 |  2021-09-21  |  [1035.不相交的线.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/1035.%E4%B8%8D%E7%9B%B8%E4%BA%A4%E7%9A%84%E7%BA%BF.md)  | 100%  |    |   |
-|  2021-09-22  |  [1047.删除字符串中的所有相邻重复项.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.md)  |   |    |   |
+|  2021-09-22  |  [1047.删除字符串中的所有相邻重复项.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/1047.%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%9B%B8%E9%82%BB%E9%87%8D%E5%A4%8D%E9%A1%B9.md)  | 100%  |    |   |
 |  2021-09-23  |  [1049.最后一块石头的重量II.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/1049.%E6%9C%80%E5%90%8E%E4%B8%80%E5%9D%97%E7%9F%B3%E5%A4%B4%E7%9A%84%E9%87%8D%E9%87%8FII.md)  |   |    |   |
 |  2021-09-24  |  [1143.最长公共子序列.md](https://github.com/youngqqcn/leetcode-master/blob/master/problems/1143.%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97.md)  |   |    |   |
